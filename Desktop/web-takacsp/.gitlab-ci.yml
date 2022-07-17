@@ -1,0 +1,8 @@
+stages:
+  - build
+  
+build_job:
+  stage: build
+  script:
+    - docker build -t nginx-test-takacsp .
+    - docker push registry.gitlab.com/devops2034/students/web-takacsp
